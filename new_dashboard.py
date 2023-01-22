@@ -16,7 +16,9 @@ selected_series = st.multiselect("",df['Fy Qtr'].unique(), default=["FY2023-Q1"]
 
 # Create a plotly chart of the selected data series
 chart = px.bar(df[df['Fy Qtr'].isin(selected_series)], x='Account Name', y='TCV', hover_data={'TCV':':$,.0f'},  color_discrete_sequence =['green'])
+chart.update_layout(xaxis=dict(showgrid = False, showticklabels = False))
 chart2 = px.line(df[df['Fy Qtr'].isin(selected_series)], x='Account Name', y='TCV', hover_data={'TCV':':$,.0f'}, color_discrete_sequence =['red'])
+chart2.update_layout(xaxis=dict(showgrid = False, showticklabels = False))
 st.plotly_chart(chart)
 st.plotly_chart(chart2)
 
