@@ -20,7 +20,7 @@ chart2 = px.line(df[df['Fy Qtr'].isin(selected_series)], x='Account Name', y='TC
 st.plotly_chart(chart, config={'displayModeBar': False})
 st.plotly_chart(chart2, config={'displayModeBar': False})
 
-st.table(df)
+st.write(df)
 
 
 
