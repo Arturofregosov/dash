@@ -21,12 +21,7 @@ st.plotly_chart(chart, config={'displayModeBar': False})
 st.plotly_chart(chart2, config={'displayModeBar': False})
 
 st.write(df)
-if st.button('Download DataFrame'):
-    st.write('Downloading...')
-    csv = df.to_csv(index=False)
-    b64 = base64.b64encode(csv.encode()).decode()
-    href = f'<a href="data:file/csv;base64,{b64}" download="Data.csv">Download CSV File</a>'
-    st.markdown(href, unsafe_allow_html=True)
+
 
 
 
