@@ -13,7 +13,7 @@ df = pd.read_csv("Data.csv", low_memory=False, na_filter = False, encoding='lati
 
 if st.button('Download Data'):
     st.write("Downloading data...")
-    st.file_downloader("Data.csv", df.to_csv(), 'csv')
+    st.file_downloader("Data Source.csv", df.to_csv(), 'csv')
     st.write("Download complete.")
 
 # Create a multiselect widget to select the data series to display
