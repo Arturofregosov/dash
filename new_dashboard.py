@@ -31,7 +31,7 @@ if st.button('Download Data'):
     st.write("Download complete.")
 
 
-
+st.write(df, 'Download Data', file_format='csv')
 
 
 
