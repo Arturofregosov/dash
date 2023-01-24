@@ -17,6 +17,8 @@ st.download_button("Download Data",df.to_csv(), mime="text/csv")
 # Columns
 col1,col2,col3 = st.columns(3)
 col1.metric("lo que sea","lo que sea", "lo que sea")
+col2.metric("lo que sea","lo que sea", "lo que sea")
+col3.metric("lo que sea","lo que sea", "lo que sea")
 
 # Create a multiselect widget to select the data series to display
 selected_series = st.multiselect("",df['Fy Qtr'].unique(), default=["FY2023-Q2"])
