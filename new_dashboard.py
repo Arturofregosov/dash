@@ -21,6 +21,8 @@ st.plotly_chart(chart, config={'displayModeBar': False})
 st.plotly_chart(chart2, config={'displayModeBar': False})
 
 
+st.file_downloader("Source data.csv", df.to_csv(), 'csv')
+
 
 
 
