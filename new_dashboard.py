@@ -15,10 +15,8 @@ import io
 
 if st.button('Download Data'):
     st.write("Downloading data...")
-    csv = df.to_csv()
-    b = io.StringIO(csv)
-    st.file_downloader("Data Source.csv", b, 'csv')
-    st.write("Download complete.")
+    df.to_csv()
+  
 
 # Create a multiselect widget to select the data series to display
 selected_series = st.multiselect("",df['Fy Qtr'].unique(), default=["FY2023-Q2"])
