@@ -11,11 +11,6 @@ st.header('Dashboard')
 # Create some sample data
 df = pd.read_csv("Data.csv", low_memory=False, na_filter = False, encoding='latin-1', )
 
-if st.button("Export to CSV"):
-    st.write("Exporting data...")
-    df.to_csv("exported_data.csv", index=False)
-    st.write("Data exported!")
-  
 
 # Create a multiselect widget to select the data series to display
 selected_series = st.multiselect("",df['Fy Qtr'].unique(), default=["FY2023-Q2"])
