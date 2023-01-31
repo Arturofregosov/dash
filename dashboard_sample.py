@@ -29,7 +29,7 @@ default = df["Stage"].unique())
 
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
 
-st.download_button("Download Data",selected_options.to_csv(), mime="text/csv")
+
 
 
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation")
@@ -43,5 +43,5 @@ chart2 = px.scatter(selected_options, "Account Segmentation", "TCV", title="Acou
 
 st.plotly_chart(chart2, config=config)
               
-
+st.download_button("Download Data",selected_options.to_csv(), mime="text/csv")
 
