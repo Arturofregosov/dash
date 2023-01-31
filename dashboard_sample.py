@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+st.title(":bar_chart: Sales Dashboard")
 
 df = pd.read_csv("data.csv", low_memory=False, na_filter = False, encoding='latin-1', )
 
