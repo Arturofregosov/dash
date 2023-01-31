@@ -16,7 +16,7 @@ st.title("Dashboard Example")
 # Sidebar
 
 st.sidebar.header("Filter Here")
-st.sidebar.width(150)
+
 
 Sales_Team = st.sidebar.multiselect("Sales Team", options = df["Sales Team"].unique(),
 default = df["Sales Team"].unique())
