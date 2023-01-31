@@ -34,7 +34,6 @@ selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Catego
 
 st.download_button("Download Data",selected_options.to_csv(), mime="text/csv")
 
-st.dataframe(selected_options)
 
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation")
 
