@@ -13,9 +13,6 @@ st.set_page_config(layout="centered")
 # Add the title
 st.title("Dashboard Example")
 
-#column
-st.columns(total_sales )
-
 # Sidebar
 
 st.sidebar.header("Filter Here")
@@ -33,9 +30,7 @@ default = df["Stage"].unique())
 #Crear tu variable para que todo se seleccione de acuerdo a tus opciones de side bar
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
 
-
-
-
+#Charts
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", color_discrete_sequence=["green"])
 
 #do not display modebar
@@ -55,4 +50,5 @@ st.download_button("Download Data",selected_options.to_csv(), mime="text/csv")
 
 #KPI
 total_sales = int(selected_options["TCV"].sum())
-
+#column
+st.columns(total_sales )
