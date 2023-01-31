@@ -43,7 +43,10 @@ st.plotly_chart(chart, config=config)
 chart2 = px.scatter(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation")
 
 st.plotly_chart(chart2, config=config)
-              
+
+chart3 = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", color_discrete_sequence=["yellow"])
+st.plotly_chart(chart3, config=config)
+
 #Boton de Download
 st.download_button("Download Data",selected_options.to_csv(), mime="text/csv")
 
