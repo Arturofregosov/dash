@@ -36,7 +36,7 @@ chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt S
 
 
 config = {'displayModeBar': False}
-
+               
 st.plotly_chart(chart, config=config)
               
 
