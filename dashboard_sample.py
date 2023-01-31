@@ -44,7 +44,7 @@ chart2 = px.scatter(selected_options, "Account Segmentation", "TCV", title="Acou
 
 st.plotly_chart(chart2, config=config)
 
-chart3 = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", color_discrete_sequence=["yellow"])
+chart3 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color_discrete_sequence=["pink"])
 st.plotly_chart(chart3, config=config)
 
 #Boton de Download
