@@ -12,7 +12,7 @@ st.set_page_config(layout="centered")
 
 # Add the title
 st.title("Dashboard Example")
-
+st.markdown("##")
 # Sidebar
 
 st.sidebar.header("Filter Here")
