@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.title("Dashboard")
 
 df = pd.read_csv("data.csv", low_memory=False, na_filter = False, encoding='latin-1', )
 
@@ -10,8 +9,6 @@ df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Numb
 
 
 st.set_page_config(layout="centered")
-
-
 
 # Sidebar
 st.sidebar.header("Filter Here")
