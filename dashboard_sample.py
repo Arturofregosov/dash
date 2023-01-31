@@ -27,7 +27,7 @@ default = df["Pipeline Category Mgr"].unique())
 Stage = st.sidebar.multiselect("Stage", options = df["Stage"].unique(),
 default = df["Stage"].unique())
 
-
+#Crear tu variable para que todo se seleccione de acuerdo a tus opciones de side bar
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
 
 
@@ -35,7 +35,7 @@ selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Catego
 
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", color_discrete_sequence=["green"])
 
-
+#do not display modebar
 config = {'displayModeBar': False}
                
 st.plotly_chart(chart, config=config)
@@ -44,5 +44,6 @@ chart2 = px.scatter(selected_options, "Account Segmentation", "TCV", title="Acou
 
 st.plotly_chart(chart2, config=config)
               
-st.download_button("Download Data",selected_options.to_csv(), mime="text/csv")
+#Boton de Download
+ st.download_button("Download Data",selected_options.to_csv(), mime="text/csv")
 
