@@ -13,6 +13,9 @@ st.set_page_config(layout="centered")
 # Add the title
 st.title("Dashboard Example")
 
+#column
+st.columns(total_sales )
+
 # Sidebar
 
 st.sidebar.header("Filter Here")
