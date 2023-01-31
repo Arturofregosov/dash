@@ -38,6 +38,8 @@ chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt S
 config = {'displayModeBar': False}
                
 st.plotly_chart(chart, config=config)
+
+chart2 = px.scatter(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation")
               
 
 
