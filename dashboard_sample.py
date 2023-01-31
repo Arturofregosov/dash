@@ -14,6 +14,7 @@ st.set_page_config(layout="centered")
 st.title("Dashboard Example")
 
 # Sidebar
+st.sidebar.width(150)
 st.sidebar.header("Filter Here")
 
 Sales_Team = st.sidebar.multiselect("Sales Team", options = df["Sales Team"].unique(),
