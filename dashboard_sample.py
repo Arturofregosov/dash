@@ -31,7 +31,7 @@ selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Catego
 
 
 
-chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation")
+chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", color_discrete_sequence=["red", "green", "blue"])
 
 
 config = {'displayModeBar': False}
