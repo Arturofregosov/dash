@@ -10,6 +10,9 @@ df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Numb
 
 st.set_page_config(layout="centered")
 
+# Add the title
+st.title("Dashboard Example")
+
 # Sidebar
 st.sidebar.header("Filter Here")
 
