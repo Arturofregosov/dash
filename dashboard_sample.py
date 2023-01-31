@@ -45,5 +45,5 @@ chart2 = px.scatter(selected_options, "Account Segmentation", "TCV", title="Acou
 st.plotly_chart(chart2, config=config)
               
 #Boton de Download
- st.download_button("Download Data",selected_options.to_csv(), mime="text/csv")
+st.download_button("Download Data",selected_options.to_csv(), mime="text/csv")
 
