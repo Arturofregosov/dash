@@ -52,6 +52,4 @@ st.download_button("Download Data",selected_options.to_csv(), mime="text/csv")
 
 #KPI
 total_sales = int(selected_options["TCV"].sum())
-middle_column = st.columns(1)
-with middle_column : total_sales
-st.markdown("---") 
+
