@@ -40,7 +40,7 @@ config = {'displayModeBar': False}
                
 st.plotly_chart(chart, config=config)
 
-chart2 = px.scatter(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation")
+chart2 = px.scatter(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", marker=dict(symbol="x"))
 
 st.plotly_chart(chart2, config=config)
 
