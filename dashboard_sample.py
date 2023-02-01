@@ -11,7 +11,7 @@ df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Numb
 st.set_page_config(layout="centered")
 
 # Add the title
-st.title("Dashboard Example")
+st.title("Dashboard")
 
 # Sidebar
 
