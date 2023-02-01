@@ -46,7 +46,7 @@ chart3 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt 
 st.plotly_chart(chart3, config=config)
 
 #Boton de Download
-st.download_button("Download Data",selected_options.to_csv(), mime="text/csv")
+
 
 #KPI
 total_sales = int(selected_options["TCV"].sum())
