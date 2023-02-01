@@ -12,8 +12,7 @@ st.set_page_config(layout="centered")
 
 # Add the title
 st.title("Dashboard")
-#Variable
-st.column(selected_options.sum()["TCV"])
+
 
 # Sidebar
 
@@ -31,6 +30,9 @@ default = df["Stage"].unique())
 
 #Crear tu variable para que todo se seleccione de acuerdo a tus opciones de side bar
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
+
+#Variable
+st.column(selected_options.sum()["TCV"])
 
 #Charts
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", color_discrete_sequence=["green"])
