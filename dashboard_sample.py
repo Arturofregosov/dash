@@ -32,7 +32,7 @@ default = df["Stage"].unique())
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
 
 #Variable
-st.column(selected_options["TCV"].sum())
+#st.column(selected_options["TCV"].sum())
 
 #Charts
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", color_discrete_sequence=["green"])
