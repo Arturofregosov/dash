@@ -12,6 +12,8 @@ st.set_page_config(layout="centered")
 
 # Add the title
 st.title("Dashboard")
+#Variable
+st.column(selected_options.sum()["TCV"])
 
 # Sidebar
 
