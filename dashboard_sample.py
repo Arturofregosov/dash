@@ -21,7 +21,8 @@ with col2:
 
 with col3:
    st.header("An owl")
- ------------------------------------------------------------------------------------------ 
+ 
+ st.markdown("""---""")
 
    # Side Bars
 Sales_Team = st.sidebar.multiselect("Sales Team", options = df["Sales Team"].unique(),
