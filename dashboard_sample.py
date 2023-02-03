@@ -16,7 +16,7 @@ with col1:
   
 
 with col2:
-   st.text("Text)
+   st.text("Text")
    
 
 with col3:
