@@ -25,5 +25,5 @@ config = {'displayModeBar': False}
 #Charts
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation")
 st.plotly_chart(chart, config=config)
-chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color = "red)
+chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color = "red")
 st.plotly_chart(chart2, config=config)
