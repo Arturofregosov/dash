@@ -51,6 +51,6 @@ col1 = st.columns(1)
 
 with col1:
    #st.text(int(selected_options["TCV"].sum()))
-  st.text("{:,}".format(int(selected_options["TCV"].sum())))
+   st.text("{:,}".format(int(selected_options["TCV"].sum())))
   
 
