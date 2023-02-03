@@ -36,10 +36,6 @@ default = df["Stage"].unique())
 
 #Selected Options
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
-#col
-col1 = st.columns(1)
-with col1:
-   st.text(selected_options["TCV"].sum())
 
 # Do not Display the Modebar
 config = {'displayModeBar': False}
@@ -50,4 +46,17 @@ st.plotly_chart(chart, config=config)
 chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color_discrete_sequence =['green'])
 st.plotly_chart(chart2, config=config)
 
+#Columns
+ 
+col1, col2, col3 = st.columns(3)
 
+with col1:
+   st.text(df["TCV"].sum())
+  
+
+with col2:
+   st.text("Text")
+   
+
+with col3:
+   st.header("An owl")
