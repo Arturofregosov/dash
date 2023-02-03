@@ -5,8 +5,7 @@ import plotly.express as px
 df = pd.read_csv("data.csv", low_memory=False, na_filter = False, encoding='latin-1', )
 df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
 st.set_page_config(page_title="Dashboard", layout="centered")
-#Selected Options
-selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
+
 
 #Columns
  
@@ -35,6 +34,8 @@ default = df["Pipeline Category Mgr"].unique())
 Stage = st.sidebar.multiselect("Stage", options = df["Stage"].unique(),
 default = df["Stage"].unique())
 
+#Selected Options
+selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
 
 # Do not Display the Modebar
 config = {'displayModeBar': False}
