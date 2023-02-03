@@ -50,9 +50,9 @@ st.plotly_chart(chart2, config=config)
 col1, col2, col3 = st.columns(3)
 
 with col1:
-   st.text(int(selected_options["TCV"].sum()))
+   #st.text(int(selected_options["TCV"].sum()))
+  st.text("{:,}".format(int(selected_options["TCV"].sum())))
   
-
 with col2:
    st.text("Text")
    
