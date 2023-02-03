@@ -12,11 +12,11 @@ st.set_page_config(page_title="Dashboard", layout="centered")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-   st.header("A cat")
+   st.text(df["TCV"].sum())
   
 
 with col2:
-   st.header("A dog")
+   st.text(df["TCV"].sum())
    
 
 with col3:
