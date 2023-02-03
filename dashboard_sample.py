@@ -6,7 +6,7 @@ df = pd.read_csv("data.csv", low_memory=False, na_filter = False, encoding='lati
 df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
 st.set_page_config(page_title="Dashboard", layout="centered")
 
-
+st.write("{:,}".format(int(selected_options["TCV"].sum())))
  
 st.markdown("""---""")
 
@@ -32,9 +32,9 @@ st.plotly_chart(chart, config=config)
 chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color_discrete_sequence =['green'])
 st.plotly_chart(chart2, config=config)
 
-#Columns
+#Total
 st.write("{:,}".format(int(selected_options["TCV"].sum())))
 
-   #st.text("{:,}".format(int(selected_options["TCV"].sum())))
+  
   
 
