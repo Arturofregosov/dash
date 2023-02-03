@@ -51,7 +51,7 @@ st.plotly_chart(chart2, config=config)
 col1, col2, col3 = st.columns(3)
 
 with col1:
-   st.text(df["TCV"].sum())
+   st.text(selected_options["TCV"].sum())
   
 
 with col2:
