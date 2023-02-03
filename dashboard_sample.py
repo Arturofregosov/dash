@@ -27,3 +27,18 @@ chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt S
 st.plotly_chart(chart, config=config)
 chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color_discrete_sequence =['green'])
 st.plotly_chart(chart2, config=config)
+
+#columns 
+col1, col2, col3 = st.columns(3)
+
+with col1:
+   st.header("A cat")
+   st.image("https://static.streamlit.io/examples/cat.jpg")
+
+with col2:
+   st.header("A dog")
+   st.image("https://static.streamlit.io/examples/dog.jpg")
+
+with col3:
+   st.header("An owl")
+   st.image("https://static.streamlit.io/examples/owl.jpg")
