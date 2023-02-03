@@ -36,6 +36,10 @@ default = df["Stage"].unique())
 
 #Selected Options
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
+#col
+col1 = st.columns(1)
+with col1:
+   st.text(selected_options["TCV"].sum())
 
 # Do not Display the Modebar
 config = {'displayModeBar': False}
