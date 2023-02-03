@@ -12,7 +12,7 @@ st.set_page_config(page_title="Dashboard", layout="centered")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-   st.text(selected_options["TCV"].sum())
+   st.text(df["TCV"].sum())
   
 
 with col2:
