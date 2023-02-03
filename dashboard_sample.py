@@ -46,11 +46,8 @@ chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt 
 st.plotly_chart(chart2, config=config)
 
 #Columns
- 
-col1 = st.columns(1)
+st.write("{:,}".format(int(selected_options["TCV"].sum())))
 
-with col1:
-   #st.text(int(selected_options["TCV"].sum()))
-   st.text("{:,}".format(int(selected_options["TCV"].sum())))
+   #st.text("{:,}".format(int(selected_options["TCV"].sum())))
   
 
