@@ -23,15 +23,15 @@ selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Catego
 
 # Do not Display the Modebar
 config = {'displayModeBar': False}
-
+#Total
+st.write("Total Value "+"{:,}".format(int(selected_options["TCV"].sum())))
 #Charts
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation")
 st.plotly_chart(chart, config=config)
 chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color_discrete_sequence =['green'])
 st.plotly_chart(chart2, config=config)
 
-#Total
-st.write("Total Value "+"{:,}".format(int(selected_options["TCV"].sum())))
+
 
   
   
