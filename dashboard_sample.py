@@ -7,7 +7,7 @@ df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Numb
 st.set_page_config(page_title="Dashboard", layout="centered")
 # Title
 st.header("Dashboard") 
-Divisin
+#Division
 st.markdown("""---""")
 
    # Side Bars
