@@ -5,7 +5,9 @@ import plotly.express as px
 df = pd.read_csv("data.csv", low_memory=False, na_filter = False, encoding='latin-1', )
 df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
 st.set_page_config(page_title="Dashboard", layout="centered")
+# Title
 st.header("Dashboard") 
+Divisin
 st.markdown("""---""")
 
    # Side Bars
