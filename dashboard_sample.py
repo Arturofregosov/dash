@@ -30,9 +30,6 @@ config = {'displayModeBar': False}
 
 #Total
 #st.write("Total Value "+"{:,}".format(int(selected_options["TCV"].sum())))
-st.beta_columns([
-    ("Left Column Title", int(selected_options["TCV"].sum())),
-    ("Middle Column Title", int(selected_options["TCV"].sum())),])
 
 #Charts
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", hover_data={'TCV':':$,.0f'})
