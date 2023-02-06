@@ -29,7 +29,13 @@ selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Catego
 config = {'displayModeBar': False}
 
 #Total
-st.write("Total Value "+"{:,}".format(int(selected_options["TCV"].sum())))
+#st.write("Total Value "+"{:,}".format(int(selected_options["TCV"].sum())))
+total_value = int(selected_options["TCV"].sum())
+
+st.row([
+    st.write("Total Value "+"{:,}".format(total_value)),
+    st.write("Total Value "+"{:,}".format(total_value)),
+])
 
 
 #Charts
