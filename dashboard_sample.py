@@ -31,9 +31,9 @@ config = {'displayModeBar': False}
 st.write("Total Value "+"{:,}".format(int(selected_options["TCV"].sum())))
 
 #Charts
-chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", hover_data={'TCV':':$,.2f'})
+chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", hover_data={'TCV':':$,.0f'})
 st.plotly_chart(chart, config=config)
-chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color_discrete_sequence =['green'], hover_data={'TCV':':$,.2f'})
+chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color_discrete_sequence =['green'], hover_data={'TCV':':$,.0f'})
 st.plotly_chart(chart2, config=config)
 
 #side by side plots
