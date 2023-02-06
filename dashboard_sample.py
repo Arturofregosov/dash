@@ -12,13 +12,13 @@ st.markdown("""---""")
 
    # Side Bars
 Sales_Team = st.sidebar.multiselect("Sales Team", options = df["Sales Team"].unique(),
-default = df["Sales Team"].unique())
+default = df["Sales Team"].unique(), height=100)
 
 Pipeline_Category_Mgr = st.sidebar.multiselect("Pipeline Category Mgr", options = df["Pipeline Category Mgr"].unique(),
-default = df["Pipeline Category Mgr"].unique())
+default = df["Pipeline Category Mgr"].unique(), height=100)
 
 Stage = st.sidebar.multiselect("Stage", options = df["Stage"].unique(),
-default = df["Stage"].unique())
+default = df["Stage"].unique(), height=100)
 
 #Selected Options
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
@@ -34,6 +34,7 @@ chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt S
 st.plotly_chart(chart, config=config)
 chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color_discrete_sequence =['green'])
 st.plotly_chart(chart2, config=config)
+
 #side by side plots
 #left_column, right_column = st.columns(2)
 #left_column.plotly_chart(chart, use_container_width  = True)
