@@ -32,9 +32,9 @@ config = {'displayModeBar': False}
 #st.write("Total Value "+"{:,}".format(int(selected_options["TCV"].sum())))
 total_value = int(selected_options["TCV"].sum())
 
-st.row([
-    st.write("Total Value "+"{:,}".format(total_value)),
-    st.write("Total Value "+"{:,}".format(total_value)),
+st.beta_columns([
+    (st.write("Total Value "+"{:,}".format(total_value))),
+    (st.write("Total Value "+"{:,}".format(total_value))),
 ])
 
 
