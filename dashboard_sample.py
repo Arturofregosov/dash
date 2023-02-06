@@ -30,7 +30,7 @@ config = {'displayModeBar': False}
 
 #Total Value
 #st.write("Total Value "+"{:,}".format(int(selected_options["TCV"].sum())),"Total Count"+"{:,}".format(int(selected_options["TCV"].count())))
-st.write("Total Value: "+"{:,}".format(int(selected_options["TCV"].sum())) + "    " + "Total Count: "+"{:,}".format(int(selected_options["TCV"].count())))
+st.write("Total Value: "+"{:,}".format(int(selected_options["TCV"].sum())) + "    "+"   " + "Total Count: "+"{:,}".format(int(selected_options["TCV"].count())))
 #Charts
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", hover_data={'TCV':':$,.0f'})
 st.plotly_chart(chart, config=config)
