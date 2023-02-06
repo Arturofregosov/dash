@@ -12,13 +12,13 @@ st.markdown("""---""")
 
    # Side Bars
 Sales_Team = st.sidebar.multiselect("Sales Team", options = df["Sales Team"].unique(),
-default = df["Sales Team"].unique(), height=100)
+default = df["Sales Team"].unique())
 
 Pipeline_Category_Mgr = st.sidebar.multiselect("Pipeline Category Mgr", options = df["Pipeline Category Mgr"].unique(),
-default = df["Pipeline Category Mgr"].unique(), height=100)
+default = df["Pipeline Category Mgr"].unique())
 
 Stage = st.sidebar.multiselect("Stage", options = df["Stage"].unique(),
-default = df["Stage"].unique(), height=100)
+default = df["Stage"].unique())
 
 #Selected Options
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
