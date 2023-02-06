@@ -11,6 +11,7 @@ st.header("Dashboard")
 st.markdown("""---""")
 
    # Side Bars
+st.sidebar.set_page_config(page_width=0.2)
 Sales_Team = st.sidebar.multiselect("Sales Team", options = df["Sales Team"].unique(),
 default = df["Sales Team"].unique())
 
