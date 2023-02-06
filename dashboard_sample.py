@@ -36,11 +36,6 @@ chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt S
 st.plotly_chart(chart, config=config)
 chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color_discrete_sequence =['green'], hover_data={'TCV':':$,.0f'})
 st.plotly_chart(chart2, config=config)
-
-#side by side plots
-#left_column, right_column = st.columns(2)
-#left_column.plotly_chart(chart, use_container_width  = True)
-#right_column.plotly_chart(chart2, use_container_width  = True)
   
   
 
