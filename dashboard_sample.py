@@ -36,7 +36,7 @@ chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt S
 st.plotly_chart(chart, config=config)
 chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color_discrete_sequence =['green'], hover_data={'TCV':':$,.0f'})
 st.plotly_chart(chart2, config=config)
-chart3 = px.pie(selected_options, values='TCV', names='Sales Team', title='Sales Team',hover_data={'TCV':':$,.0f'})
+chart3 = px.pie(selected_options, values='TCV', names='Sales Team', title='Sales Team')
 st.plotly_chart(chart3, config=config)
   
   
