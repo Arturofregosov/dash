@@ -8,7 +8,7 @@ def get_data_from_csv():
     return df
 df = get_data_from_csv()
       
-
+#Replacing some strange values that datasource columns have
 df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
 
 # Title
@@ -34,7 +34,7 @@ selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Catego
 # Do not Display the Modebar Variable
 config = {'displayModeBar': False}
 
-#Total Value
+#Total Value and Total Count Variable
 st.write("Total Value  "+"${:,}".format(int(selected_options["TCV"].sum())),"Total Count  "+"{:,}".format(int(selected_options["TCV"].count())))
 
 #Charts
