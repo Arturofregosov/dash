@@ -34,8 +34,13 @@ selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Catego
 # Do not Display the Modebar Variable
 config = {'displayModeBar': False}
 
-#Total Value and Total Count Variable
-st.write("Total Value  "+"${:,}".format(int(selected_options["TCV"].sum())),"Total Count  "+"{:,}".format(int(selected_options["TCV"].count())))
+#KPI Total Value and Total Count Variable
+left_column, right_column = st.columns(2)
+with left_column:
+    st.write("Total Value  "+"${:,}".format(int(selected_options["TCV"].sum())))
+    #st.write("Total Value  "+"${:,}".format(int(selected_options["TCV"].sum())),"Total Count  "+"{:,}".format(int(selected_options["TCV"].count())))
+with right_column:
+    st.write("Total Count  "+"{:,}".format(int(selected_options["TCV"].count())))
 
 #Charts
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", hover_data={'TCV':':$,.0f'})
