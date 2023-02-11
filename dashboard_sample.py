@@ -12,7 +12,7 @@ df = get_data_from_csv()
 df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
 
 #------------------------- Title
-st.header(":bar_chart: Dashboard") 
+st.header(":random: Dashboard") 
 
 #--------------------------Division
 st.markdown("""---""")
