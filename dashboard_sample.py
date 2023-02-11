@@ -14,10 +14,10 @@ df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Numb
 #------------------------- Title
 st.header(":bar_chart: Dashboard") 
 
-#--------------------------Division
+#--------------------------Division-------------
 st.markdown("""---""")
 
-#---------------------- Side Bars
+#---------------------- Sidebars-----------------
 
 Sales_Team = st.sidebar.multiselect("Sales Team", options = df["Sales Team"].unique(),
 default = df["Sales Team"].unique())
