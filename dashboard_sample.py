@@ -12,7 +12,7 @@ df = get_data_from_csv()
 df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
 
 #------------------------- Title
-st.header(":chart_with_upwards_trend: Dashboard") 
+st.header(":bar_chart: Dashboard") 
 
 #--------------------------Division
 st.markdown("""---""")
