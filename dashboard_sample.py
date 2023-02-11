@@ -43,7 +43,7 @@ with left_column:
 with right_column:
     st.write("Total Count  "+"{:,}".format(int(selected_options["TCV"].count())))
 
-#Charts
+#-------------------Charts
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation",color_discrete_sequence =['pink'],hover_data={'TCV':':$,.0f'})
 chart = chart.update_layout({
     'plot_bgcolor': 'rgba(0,0,0,0)',
@@ -57,6 +57,7 @@ chart2 = chart2.update_layout({
     'paper_bgcolor': 'rgba(0,0,0,0)'
 })
 st.plotly_chart(chart2, config=config)
+
 chart3 = px.pie(selected_options, values='TCV', names='Sales Team', title='Sales Team')
 st.plotly_chart(chart3, config=config)
   
