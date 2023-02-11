@@ -1,23 +1,23 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-#Reading the Data and caching the data
+#--------------Reading the Data and caching the data
 @st.cache
 def get_data_from_csv():
     df = pd.read_csv("data.csv", low_memory=False, na_filter = False, encoding='latin-1', )
     return df
 df = get_data_from_csv()
       
-#Replacing some strange values that datasource columns have
+#-------------Replacing some strange values that datasource columns have
 df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
 
-# Title
-st.header(":bar_chart: Dashboard") 
+#------------------------- Title
+st.header(":donut_chart: Dashboard") 
 
-#Division
+#--------------------------Division
 st.markdown("""---""")
 
-   # Side Bars
+#---------------------- Side Bars
 
 Sales_Team = st.sidebar.multiselect("Sales Team", options = df["Sales Team"].unique(),
 default = df["Sales Team"].unique())
@@ -28,13 +28,13 @@ default = df["Pipeline Category Mgr"].unique())
 Stage = st.sidebar.multiselect("Stage", options = df["Stage"].unique(),
 default = df["Stage"].unique())
 
-#Selected Options
+#------------------Selected Options
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
 
-# Do not Display the Modebar Variable
+# ---------------------Do not Display the Modebar Variable
 config = {'displayModeBar': False}
 
-#KPI Total Value and Total Count Variables
+#---------------------KPI Total Value and Total Count Variables
 left_column, right_column = st.columns(2)
 
 with left_column:
@@ -43,7 +43,7 @@ with left_column:
 with right_column:
     st.write("Total Count  "+"{:,}".format(int(selected_options["TCV"].count())))
 
-#-------------------Charts
+#-----------------------------Charts
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation",color_discrete_sequence =['pink'],hover_data={'TCV':':$,.0f'})
 chart = chart.update_layout({
     'plot_bgcolor': 'rgba(0,0,0,0)',
