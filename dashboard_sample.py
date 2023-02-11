@@ -12,7 +12,7 @@ df = get_data_from_csv()
 df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
 
 #------------------------- Title
-st.header(":dog: Dashboard") 
+st.header(":executive: Dashboard") 
 
 #--------------------------Division
 st.markdown("""---""")
