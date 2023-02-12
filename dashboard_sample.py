@@ -51,7 +51,7 @@ chart = chart.update_layout({
     'paper_bgcolor': 'rgba(0,0,0,0)'
 })
 
-#st.plotly_chart(chart, config=config)
+st.plotly_chart(chart, config=config)
 
 #Chart 2
 
@@ -62,16 +62,7 @@ chart2 = chart2.update_layout({
     'paper_bgcolor': 'rgba(0,0,0,0)'
 })
 
-#st.plotly_chart(chart2, config=config)
-
-#Side by Side Charts
-left_column, right_column = st.columns(2)
-
-with left_column:
-    st.plotly_chart(chart, config=config, use_container_width= True)
-    
-with right_column:
-    st.plotly_chart(chart2, config=config, use_container_width= True)
+st.plotly_chart(chart2, config=config)
 
 #Chart 3
 
