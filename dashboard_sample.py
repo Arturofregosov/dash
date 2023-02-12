@@ -71,7 +71,7 @@ chart3 = px.pie(selected_options, values='TCV', names='Sales Team', title='Sales
 
 st.plotly_chart(chart3, config=config)
   
-  # Hide Streamlit Style
+#------------------------------Hide Streamlit Style
 
 hidestyle ="""
       <style>
