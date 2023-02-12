@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+st.sidebar.image("https://images.unsplash.com/photo-1594907183331-0eb6cbc7d4f0")
 #--------------Reading the Data and caching the data
 @st.cache
 def get_data_from_csv():
