@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+
+st.sidebar.width(150)
 #--------------Reading the Data and caching the data
 @st.cache
 def get_data_from_csv():
