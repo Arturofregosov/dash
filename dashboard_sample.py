@@ -13,9 +13,9 @@ df = get_data_from_csv()
 df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
 
 #---------------title
-st.title("My Streamlit App")
+st.title(":bar_chart: Dashboard")
 #------------------------- header
-st.header(":bar_chart: Dashboard") 
+#st.header(":bar_chart: Dashboard") 
 
 #--------------------------Division-------------
 st.markdown("""---""")
