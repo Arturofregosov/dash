@@ -12,7 +12,9 @@ df = get_data_from_csv()
 #-------------Replacing some strange values that datasource columns have
 df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
 
-#------------------------- Title
+#---------------title
+st.title("My Streamlit App")
+#------------------------- header
 st.header(":bar_chart: Dashboard") 
 
 #--------------------------Division-------------
