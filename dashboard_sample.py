@@ -2,7 +2,13 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.sidebar.width(200)
+st.sidebar.markdown("""
+<style>
+    .reportview-container .sidebar {
+        background-color: yellow;
+    }
+</style>
+""", unsafe_allow_html=True)
 #--------------Reading the Data and caching the data
 @st.cache
 def get_data_from_csv():
