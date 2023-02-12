@@ -68,10 +68,10 @@ chart2 = chart2.update_layout({
 left_column, right_column = st.columns(2)
 
 with left_column:
-    st.plotly_chart(chart, config=config, use_container_width: True)
+    st.plotly_chart(chart, config=config, use_container_width= True)
     
 with right_column:
-    st.plotly_chart(chart2, config=config, use_container_width: True)
+    st.plotly_chart(chart2, config=config, use_container_width= True)
 
 #Chart 3
 
