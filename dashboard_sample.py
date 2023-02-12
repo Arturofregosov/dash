@@ -45,20 +45,28 @@ with right_column:
 
 #-----------------------------Charts
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation",color_discrete_sequence =['pink'],hover_data={'TCV':':$,.0f'})
+
 chart = chart.update_layout({
     'plot_bgcolor': 'rgba(0,0,0,0)',
     'paper_bgcolor': 'rgba(0,0,0,0)'
 })
+
 st.plotly_chart(chart, config=config)
 
+#Chart 2
+
 chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color_discrete_sequence =['green'], hover_data={'TCV':':$,.0f'})
+
 chart2 = chart2.update_layout({
     'plot_bgcolor': 'rgba(0,0,0,0)',
     'paper_bgcolor': 'rgba(0,0,0,0)'
 })
+
 st.plotly_chart(chart2, config=config)
 
+#Chart 3
 chart3 = px.pie(selected_options, values='TCV', names='Sales Team', title='Sales Team')
+
 st.plotly_chart(chart3, config=config)
   
   
