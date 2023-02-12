@@ -12,10 +12,8 @@ df = get_data_from_csv()
 #-------------Replacing some strange values that datasource columns have
 df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
 
-#---------------title
+#---------------title---------------------
 st.title(":bar_chart: Dashboard")
-#------------------------- header
-#st.header(":bar_chart: Dashboard") 
 
 #--------------------------Division-------------
 st.markdown("""---""")
