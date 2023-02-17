@@ -64,6 +64,14 @@ chart2 = chart2.update_layout({
     'paper_bgcolor': 'rgba(0,0,0,0)'
 })
 
+#---------------------KPI Total Value and Total Count Variables
+left_column, right_column = st.columns(2)
+
+with left_column:
+    st.write("Total Value  "+"${:,}".format(int(selected_options["TCV"].sum())))
+    
+with right_column:
+    st.write("Total Count  "+"{:,}".format(int(selected_options["TCV"].count())))
 st.plotly_chart(chart2, config=config)
 
 #Chart 3
