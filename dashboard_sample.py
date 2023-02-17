@@ -56,7 +56,14 @@ chart = chart.update_layout({
 st.plotly_chart(chart, config=config)
 
 #Chart 2--------------------------------------------------------------------------------
+#---------------------KPI Total Value and Total Count Variables------------------
+left_column, right_column = st.columns(2)
 
+with left_column:
+    st.write("Total Value  "+"${:,}".format(int(selected_options["TCV"].sum())))
+    
+with right_column:
+    st.write("Total Count  "+"{:,}".format(int(selected_options["TCV"].count())))
 chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color_discrete_sequence =['green'], hover_data={'TCV':':$,.0f'})
 
 chart2 = chart2.update_layout({
