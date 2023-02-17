@@ -29,7 +29,7 @@ default = df["Pipeline Category Mgr"].unique())
 Stage = st.sidebar.multiselect("Stage", options = df["Stage"].unique(),
 default = df["Stage"].unique())
 
-#------------------Selected Options
+#------------------Selected Options-----------------------
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
 
 # ---------------------Do not Display the Modebar Variable
@@ -64,6 +64,7 @@ with left_column:
     
 with right_column:
     st.write("Total Count  "+"{:,}".format(int(selected_options["TCV"].count())))
+    #----------------------------------------------------------------------------------
 chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Acounnt Segmentation", color_discrete_sequence =['green'], hover_data={'TCV':':$,.0f'})
 
 chart2 = chart2.update_layout({
@@ -82,7 +83,7 @@ with left_column:
     
 with right_column:
     st.write("Total Count  "+"{:,}".format(int(selected_options["TCV"].count())))
-    
+ #----------------------------------------------   
 chart3 = px.pie(selected_options, values='TCV', names='Sales Team', title='Sales Team')
 st.plotly_chart(chart3, config=config) 
 #------------------------------Hide Streamlit Style
