@@ -39,10 +39,10 @@ config = {'displayModeBar': False}
 left_column, right_column = st.columns(2)
 
 with left_column:
-    st.write("Total Value"+"${:,}".format(int(selected_options["TCV"].sum())))
+    st.write("Total Value "+"${:,}".format(int(selected_options["TCV"].sum())))
     
 with right_column:
-    st.write("Total Count"+"{:,}".format(int(selected_options["TCV"].count())))
+    st.write("Total Count "+"{:,}".format(int(selected_options["TCV"].count())))
 
 #---------------------------------Charts-----------------------------------------
 #Chart 1
