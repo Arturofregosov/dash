@@ -75,11 +75,6 @@ with right_column:
 st.plotly_chart(chart2, config=config)
 
 #Chart 3
-
-chart3 = px.pie(selected_options, values='TCV', names='Sales Team', title='Sales Team')
-
-st.plotly_chart(chart3, config=config)
-
 #---------------------KPI Total Value and Total Count Variables
 left_column, right_column = st.columns(2)
 
@@ -89,7 +84,9 @@ with left_column:
 with right_column:
     st.write("Total Count  "+"{:,}".format(int(selected_options["TCV"].count())))
 st.plotly_chart(chart2, config=config)
-  
+chart3 = px.pie(selected_options, values='TCV', names='Sales Team', title='Sales Team')
+
+st.plotly_chart(chart3, config=config) 
 #------------------------------Hide Streamlit Style
 
 hidestyle ="""
