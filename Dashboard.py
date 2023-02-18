@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objs as go
 
 
 df = pd.read_csv("data.csv", low_memory=False, na_filter = False, encoding='latin-1', )
@@ -31,7 +32,10 @@ selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Catego
 
 
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation")
-
+chart.update_layout(
+    plot_bgcolor='rgba(0,0,0,0)',
+    paper_bgcolor='rgba(0,0,0,0)'
+)
 
 config = {'displayModeBar': False}
 
