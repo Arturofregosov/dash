@@ -31,7 +31,7 @@ default = df["Stage"].unique())
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
 
 
-chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation")
+chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", hover_data={'TCV':':$,.2f'})
 chart.update_layout(
     plot_bgcolor='rgba(0,0,0,0)',
     paper_bgcolor='rgba(0,0,0,0)'
