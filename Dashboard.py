@@ -32,8 +32,6 @@ default = df["Stage"].unique())
 
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
 
-st.download_button("Download Data",selected_options.to_csv(), mime="text/csv")
-
 st.dataframe(selected_options)
 
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation")
