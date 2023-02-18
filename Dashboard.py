@@ -30,6 +30,14 @@ default = df["Stage"].unique())
 
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
 
+# Calculate sum and count of selected options
+total_sum = selected_options["TCV"].sum()
+total_count = selected_options.shape[0]
+
+# Write sum and count to output
+st.write(f"Total Sum: {total_sum}")
+st.write(f"Total Count: {total_count}")
+
 
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", hover_data={'TCV':':$,.2f'})
 chart.update_layout(
