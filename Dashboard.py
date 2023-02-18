@@ -35,7 +35,7 @@ total_sum = selected_options["TCV"].sum()
 total_count = selected_options.shape[0]
 
 # Write sum and count to output
-st.write(f"Total Sum: {total_sum}")
+st.write(f"Total Sum: ${total_sum:.2f}")
 st.write(f"Total Count: {total_count}")
 
 
