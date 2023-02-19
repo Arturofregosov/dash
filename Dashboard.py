@@ -3,9 +3,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objs as go
 
-
-    df = pd.read_csv("data.csv", low_memory=False, na_filter = False, encoding='latin-1', )
-    df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
+df = pd.read_csv("data.csv", low_memory=False, na_filter = False, encoding='latin-1', )
+df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
  
 
 st.set_page_config(
