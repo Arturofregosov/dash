@@ -12,8 +12,6 @@ st.set_page_config(
     page_title="Dashboard", layout="centered"
 )
 
-
-
 # Sidebar
 st.sidebar.header("Filter Here")
 
@@ -31,8 +29,6 @@ selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Catego
 
 # Calculate sum and count of selected options
 total_sum = selected_options["TCV"].sum()
-
-
 total_count = selected_options.shape[0]
 
 # Write sum and count to output
