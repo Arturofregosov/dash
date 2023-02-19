@@ -32,7 +32,7 @@ selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Catego
 
 # Calculate sum and count of selected options
 total_sum = selected_options["TCV"].sum()
-formatted_total_sum = = "{:,}".format(total_sum)
+formatted_total_sum =  "{:,}".format(total_sum)
 total_sum = formatted_total_sum
 total_count = selected_options.shape[0]
 
