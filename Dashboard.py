@@ -8,6 +8,7 @@ def get_data():
     df = pd.read_csv("data.csv", low_memory=False, na_filter = False, encoding='latin-1', )
     return df
 df = get_data()
+
 df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
 st.set_page_config(
     page_title="Dashboard", layout="centered"
