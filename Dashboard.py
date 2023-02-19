@@ -8,6 +8,7 @@ def load_data():
     df = pd.read_csv("data.csv", low_memory=False, na_filter = False, encoding='latin-1', )
     df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
     return df
+
 df = load_data()
 
 st.set_page_config(
