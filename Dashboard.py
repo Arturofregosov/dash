@@ -46,7 +46,5 @@ chart.update_layout(
 )
 chart.update_traces(marker_color='pink')
 config = {'displayModeBar': False}
-
-
 st.plotly_chart(chart, config=config)
 
