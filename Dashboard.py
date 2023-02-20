@@ -4,8 +4,13 @@ import plotly.express as px
 import plotly.graph_objs as go
 
 
-df = pd.read_csv("data.csv", low_memory=False, na_filter = False, encoding='latin-1', )
-df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
+@st.cache
+def get_data():
+    df = pd.read_csv("data.csv", low_memory=False, na_filter=False, encoding='latin-1')
+    df.columns = df.columns.str.replace("ï»¿Opportunity Number","Opportunity Number")
+    return df
+
+df = get_data()
 
 st.set_page_config(
     page_title="Dashboard", layout="centered"
