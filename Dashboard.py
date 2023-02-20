@@ -46,3 +46,12 @@ chart.update_traces(marker_color='pink')
 config = {'displayModeBar': False}
 st.plotly_chart(chart, config=config)
 
+#Hide Style
+hide_style = """<style> 
+                #MainMenu {visibility:hidden;}
+                footer {visibility: hidden;}
+                header {visibility: hidden;}
+                </style>
+                """
+st.markdown(hide_style, unsafe_allow_html=True)
+
