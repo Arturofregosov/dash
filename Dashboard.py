@@ -3,9 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objs as go
 
-st.set_page_config(
-    page_title="Dashboard", layout="centered"
-)
+st.set_page_config(page_title="Dashboard", layout="centered")
 
 @st.cache
 def get_data():
@@ -44,6 +42,7 @@ chart.update_layout(yaxis_title=None)
 chart.update_layout(xaxis_title=None)
 chart.update_layout(plot_bgcolor='rgba(0,0,0,0)',paper_bgcolor='rgba(0,0,0,0)')
 chart.update_traces(marker_color='pink')
+
 config = {'displayModeBar': False}
 st.plotly_chart(chart, config=config)
 
