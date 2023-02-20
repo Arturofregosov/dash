@@ -13,8 +13,6 @@ def get_data():
 df = get_data()
 
 # Sidebar
-st.sidebar.header("Filter Here")
-
 Sales_Team = st.sidebar.multiselect("Sales Team", options = df["Sales Team"].unique(),
 default = df["Sales Team"].unique())
 
@@ -24,7 +22,7 @@ default = df["Pipeline Category Mgr"].unique())
 Stage = st.sidebar.multiselect("Stage", options = df["Stage"].unique(),
 default = df["Stage"].unique())
 
-
+#Connect all the sidebars
 selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Category Mgr"].isin(Pipeline_Category_Mgr)) & (df["Stage"].isin(Stage))]
 
 # Calculate sum and count of selected options
