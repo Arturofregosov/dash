@@ -38,8 +38,10 @@ col1, col2 = st.columns(2)
 col1.write(f"Total Sum: ${total_sum:,.2f}")
 col2.write(f"Total Count: {total_count}")
 
-
+#Chart
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Chart", hover_data={'TCV':':$,.2f'})
+chart.update_layout(yaxis_title=None)
+chart.update_layout(xaxis_title=None)
 chart.update_layout(
     plot_bgcolor='rgba(0,0,0,0)',
     paper_bgcolor='rgba(0,0,0,0)'
