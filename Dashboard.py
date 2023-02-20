@@ -33,9 +33,13 @@ selected_options = df[(df["Sales Team"].isin(Sales_Team)) & (df["Pipeline Catego
 total_sum = selected_options["TCV"].sum()
 total_count = selected_options.shape[0]
 
+col1, col2 = st.columns(2)
+col1.write(f"Total Sum: ${total_sum:,.2f}")
+col2.write(f"Total Count: {total_count}")
+
 # Write sum and count to output
-st.write(f"Total Sum: ${total_sum:,.2f}")
-st.write(f"Total Count: {total_count}")
+#st.write(f"Total Sum: ${total_sum:,.2f}")
+#st.write(f"Total Count: {total_count}")
 
 
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Acounnt Segmentation", hover_data={'TCV':':$,.2f'})
