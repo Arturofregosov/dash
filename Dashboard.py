@@ -44,8 +44,7 @@ chart.update_layout(yaxis_title=None)
 chart.update_layout(xaxis_title=None)
 chart.update_layout(
     plot_bgcolor='rgba(0,0,0,0)',
-    paper_bgcolor='rgba(0,0,0,0)'
-)
+    paper_bgcolor='rgba(0,0,0,0)')
 chart.update_traces(marker_color='pink')
 config = {'displayModeBar': False}
 st.plotly_chart(chart, config=config)
