@@ -3,6 +3,9 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objs as go
 
+st.set_page_config(
+    page_title="Dashboard", layout="centered"
+)
 
 @st.cache
 def get_data():
@@ -11,10 +14,6 @@ def get_data():
     return df
 
 df = get_data()
-
-st.set_page_config(
-    page_title="Dashboard", layout="centered"
-)
 
 # Sidebar
 st.sidebar.header("Filter Here")
