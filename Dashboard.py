@@ -34,18 +34,19 @@ col1, col2 = st.columns(2)
 col1.write(f"Total Sum: ${total_sum:,.2f}")
 col2.write(f"Total Count: {total_count}")
 
+#Do not display mode bar variable
+config = {'displayModeBar': False}
+
 #Chart
 chart = px.bar(selected_options, "Account Segmentation", "TCV", title="Chart", hover_data={'TCV':':$,.2f'})
 chart.update_layout(yaxis_title=None)
 chart.update_layout(xaxis_title=None)
 chart.update_layout(plot_bgcolor='rgba(0,0,0,0)',paper_bgcolor='rgba(0,0,0,0)')
 chart.update_traces(marker_color='pink')
-
-config = {'displayModeBar': False}
 st.plotly_chart(chart, config=config)
 
 #Chart2
-chart2 = px.bar(selected_options, "Account Segmentation", "TCV", title="Chart", hover_data={'TCV':':$,.2f'})
+chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Chart", hover_data={'TCV':':$,.2f'})
 chart2.update_layout(yaxis_title=None)
 chart2.update_layout(xaxis_title=None)
 chart2.update_layout(plot_bgcolor='rgba(0,0,0,0)',paper_bgcolor='rgba(0,0,0,0)')
