@@ -44,6 +44,14 @@ chart.update_traces(marker_color='pink')
 config = {'displayModeBar': False}
 st.plotly_chart(chart, config=config)
 
+#Chart2
+chart2 = px.bar(selected_options, "Account Segmentation", "TCV", title="Chart", hover_data={'TCV':':$,.2f'})
+chart2.update_layout(yaxis_title=None)
+chart2.update_layout(xaxis_title=None)
+chart2.update_layout(plot_bgcolor='rgba(0,0,0,0)',paper_bgcolor='rgba(0,0,0,0)')
+chart2.update_traces(marker_color='green')
+st.plotly_chart(chart2, config=config)
+
 #Hide Style
 hide_style = """<style> 
                 #MainMenu {visibility:hidden;}
