@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objs as go
 
-st.set_page_config(page_title="Dashboard", layout="centered")
+st.set_page_config(page_title="Dashboard AFV", layout="centered")
 
 @st.cache
 def get_data():
@@ -50,7 +50,7 @@ chart2 = px.bar(selected_options, "TCV", "Account Segmentation", title="Chart", 
 chart2.update_layout(yaxis_title=None)
 chart2.update_layout(xaxis_title=None)
 chart2.update_layout(plot_bgcolor='rgba(0,0,0,0)',paper_bgcolor='rgba(0,0,0,0)')
-chart2.update_traces(marker_color='green')
+chart2.update_traces(marker_color='yellow')
 st.plotly_chart(chart2, config=config)
 
 #Hide Style
